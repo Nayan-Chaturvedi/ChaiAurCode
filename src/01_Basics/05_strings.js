@@ -6,7 +6,7 @@ const repoCount = 50;
 
 const gameName = new String("Sarfaraz");
 // console.log(gameName[0]);
-// console.log(gameName.__proto__);
+// console.log(gameName.__proto__);		// Access prototype
 
 // console.log(gameName.length);
 // console.log(gameName.toUpperCase());
@@ -14,10 +14,11 @@ const gameName = new String("Sarfaraz");
 // console.log(gameName.indexOf('z'));
 
 const newString = gameName.substring(0, 4);
-console.log(newString);
+console.log(newString);				//	Sarf
 
 const anotherString = gameName.slice(-8, 4);
-console.log(anotherString);
+console.log(anotherString);				//	-8 means Sarfaraz ki length 8 hai to hum -8 de diya hai which means 0.
+							//	 Hum yaha 0 bhi de sakte the  output : Sarf
 
 const newStringOne = "  Sarfaraz.     ";
 console.log(newStringOne);

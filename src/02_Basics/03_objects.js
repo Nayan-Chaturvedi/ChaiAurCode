@@ -4,7 +4,7 @@ const mySym = Symbol("key1");
 const JsUser = {
   name: "Hitesh",
   "full name": "Hitesh Chaudhary",
-  [mySym]: "mykey1",
+  [mySym]: "mykey1",				// Symbol ko as a key use eshe kiya jata hai object[JsUser] me
   age: 18,
   location: "Jaipur",
   email: "hitesh@google.com",
@@ -13,11 +13,11 @@ const JsUser = {
 };
 
 // console.log(JsUser["name"]);
-// console.log(JsUser["full name"]);
-// console.log(JsUser["mySym"]);
+// console.log(JsUser["full name"]);		//	full name ko hum yaha . operator se access nahi kar sakte eg=JsUser.full								name
+// console.log(JsUser["mySym"]);		// Hame mysym ko print, typeOf [] bracket me hi karna hota hai
 // console.log(typeof JsUser[mySym]);
 
-// JsUser.email = "hitesh@chatgpt.com"
+// JsUser.email = "hitesh@chatgpt.com"		//	Update Object
 // console.log(JsUser);
 // Object.freeze(JsUser);
 // JsUser.email = "hitesh@microsoft.com"

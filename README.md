@@ -195,7 +195,7 @@
   - Primitive is into 7 categories
   - Primitive datatype is call by value
   - when we take the data, it is copied, so the changes are done on copied data
-  - String, Number, Boolean, null (meam empty), undefined, Symbol (to make the value unique), BigInt
+  - String, Number, Boolean, null (mean empty), undefined, Symbol (to make the value unique), BigInt
 - **Non-Primitive Datatype:**
   - It is also called as reference type
   - we can get the reference of the available data
@@ -220,7 +220,7 @@
 ![DOM](/src/images/stack.JPG)
 
 - Memory is of 2 types 1. Stack 2. Heap Memory
-- Stack memory is used for primitiva datatype while heap memory is used for non primitive datatype
+- Stack memory is used for primitive datatype while heap memory is used for non primitive datatype
 - To draw online diagram use: https://excalidraw.com/
 - we will get original value reference when take back the value from reference value
 - Whatever goes in heap, we only get the reference, means whatever changes we are doing, we are doing in original value
@@ -234,14 +234,14 @@
 
 - Through string, we can use modern syntax to write it.
 - We denote string single or double quote '' / ""
-- In modern days, we need to use backticks `` for strin manipulation called string interpolation.
+- In modern days, we need to use backticks `` for string manipulation called string interpolation.
 - All methods are available in **__proto__** for string, example toUpperCase() etc
 - If we use methods related to **__proto__** then original value is not changed.
 - we can check what character available we use charAt(index)
-- **indexOf('charactor') :** we can get the index of the charactor
+- **indexOf('character') :** we can get the index of the character
 - **substring(0,4)** the last value is excluded.
 - **trim() :** this method is used to remove the unwanted space, mostly it is used in filling the form
-- **split('-') :** split mothod is used to split with specified digit and gives the output in arrays
+- **split('-') :** split method is used to split with specified digit and gives the output in arrays
 
 
 <hr/>
@@ -251,10 +251,10 @@
 
 - If we write const score=400, then Javscript will recognise it as number, but we can explicitly define numbers as new Number(400)
 - we can convert number into string using toString() method, it will help me to use string methods
-- **toFixed() :**  to give the precision value till few decimal values, like toFixed(2) ➜ it wwill give .00 like that
+- **toFixed() :**  to give the precision value till few decimal values, like toFixed(2) ➜ it will give .00 like that
 - **toPrecision(3):**  it will focus on only 3 digit value only
 - **toLocaleString('en-IN') :** this method will be helpful in giving the output in redable format of number, like 1000000 ➜ 1,000,00
-- **Maths.abs():** it will convert -ve value into +ve value, +ve will remain +ve, it helps to convert valeue into +ve value.
+- **Maths.abs():** it will convert -ve value into +ve value, +ve will remain +ve, it helps to convert -ive value into +ve value.
 - **Math.round():** To get the round value, example: Math.round(4.3) ➜ 4
 - **Math.ceil():** It will round the value to top. Example: Math.ceil(4.6) ➜ 5 or Math.ceil(4.2) ➜ 5
 - **Math.floor():** It will take bottom value, Example: Math.floor(4.2) -6-> 4.2 or Math.floor(4.6) ➜ 4, It will always takes the lowest value
@@ -273,7 +273,7 @@
 ## Lecture 13: Date and Time
 
 - **Reference:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
-- Date is calculted in milli second starting from January 1st
+- Date is calculated in milli second starting from January 1st 1970
 - In future, we will be using Temporal object like Math, which will contain all the methods, but as of we will be using Date object only.
 - Date can be converted into string using toString() method
 - **toLocaleDateString():** It will give the value with date with / format Example: 9/27/2023
@@ -302,15 +302,15 @@
 
 ![DOM](/src/images/array.png)
 
-- Array has squre brakcet, Array has elements in it.
+- Array has square bracket, Array has elements in it.
 - **Reference Documentation:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-- We can store the muliple values in single variable
-- Javascript array are resizable
+- We can store the multiple values in single variable
+- JavaScript array are resizable
 - Array indexing starts with 0
 - we can access the array using indexing, Example: myArr[0]
-- When we copy array, the array creats shallow copy, means share same reference point, means, it will change the original array, while Deep copy do not share the same reference
+- When we copy array, the array create shallow copy, means share same reference point, means, it will change the original array, while Deep copy do not share the same reference
 - We can declare the array using 2 types
-- Using square brakcet []
+- Using square bracket []
 - Using **new Array()**. here it will add the square bracket by its own
 - We can view all the methods available in array.
 - **Example:**
@@ -318,7 +318,7 @@
   const numbers = [1,2,3,4];
   console.log(numbers) ➜ click on prototype to see the methods
 - Array contain the mixed data type
-- Array ha prototype proerty access
+- Array has prototype property access
 - Array has length property , to calculate the length of an array
 - **push():** It will add the value in the array
 - **pop():** Remove the last available value in array
@@ -345,7 +345,7 @@
 
 ![DOM](/src/images/object.png)
 
-- To master javascript, we need to learn 2 things
+- To master JavaScript, we need to learn 2 things
   - Objects
   - Events
 - Objects can be declared in 2 ways
@@ -360,8 +360,8 @@
 - we can update the value of the user using = equal to
 - We can freeze the object using Object.freeze() to avoid the further update
 - To define Symbol, we use square bracket [], it says I am a symbol
-- Function can be treated as a varaible in javascript
-- We can get the reference if we dont give paranthesis in function call with object, example: JsUser.greeting ➜ [Function (anonymous)]
+- Function can be treated as a variable in JavaScript
+- We can get the reference if we don't give parenthesis in function call with object, example: JsUser.greeting ➜ [Function (anonymous)]
 - If we want to reference the same object, then we can use 'this'
 
 
@@ -378,10 +378,10 @@
 - We can extract keys using Object.keys and values using Object.values from an object
 - **Object.entries() :** To get all the values of object in key value pair
 - **hasOwnProperty():** To check the property exists in object or not
-- To check the different mehoda available in object, use this trick
+- To check the different method available in object, use this trick
 - Go to browser console
 - ```javascript
-  const obj1 = {1:"a",2:"b"} ➜ obj1 ➜ chec all the methods in [prototype]
+  const obj1 = {1:"a",2:"b"} ➜ obj1 ➜ check all the methods in [prototype]
 
 
 <hr/>
