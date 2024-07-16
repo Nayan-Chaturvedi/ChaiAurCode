@@ -58,11 +58,14 @@ const course = {
   courseInstructor: "hitesh"
 };
 
-// course["courseInstructor"]
+Way to print courseInstructor = 
 
-// const { courseInstructor } = course;
+//1. console.log(course.courseInstructor);	// Agra hum multiple time courseInstructor print karna hoga tb multiple time same line 							//	likhni hogi
+
+//2.  const { courseInstructor } = course;	// Using De-strcuturing
 // console.log(courseInstructor);
-const { courseInstructor: instructor } = course;
+3.const { courseInstructor: instructor } = course;		//  We can rename the DE-structure value using colon 
+
 console.log(instructor);
 
 // {
@@ -70,7 +73,7 @@ console.log(instructor);
 //     "coursename" : "js in hindi",
 //     "price" : "free"
 // }
-
+			// Bekow code come from https://randomuser.me/ api
 // {
 //     "results": [
 //       {

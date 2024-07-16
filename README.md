@@ -331,7 +331,7 @@
 - **concat():** It will combine 2 arrays and gives the new array
 - **spread operator:** think glass of water, when glass fall ➜ water spread to the ground : remember
 - In spread operator, we will get the spread out values
-- **flat():** This method is used to flatten the array, we need to mention the depth as a pramater
+- **flat():** This method is used to flatten the array, we need to mention the depth as a parameter
 - **Array.isArray():** To check the given array is array or not, it will give true or false response
 - **Array.from():** this method will convert any given number/name into array
 - If we pass an array in from, then we need to mention, do we need to create the array for keys or values
@@ -380,21 +380,21 @@
 - **hasOwnProperty():** To check the property exists in object or not
 - To check the different method available in object, use this trick
 - Go to browser console
-- ```javascript
+- ```JavaScript
   const obj1 = {1:"a",2:"b"} ➜ obj1 ➜ check all the methods in [prototype]
 
 
 <hr/>
 <br/>
 
-## Lecture 17: Objects Destrcuturing and JSON API
+## Lecture 17: Objects De-structuring and JSON API
 
-- Object destructuring is a syntactically sugar, means it only provide the syntax
-- Object destructuring helps in avaoiding the repeatability of the code
-- In Object destructuring, we are extracting the property from object
-- We can rename the destructure value using colon :
+- Object DE-structuring is a syntactically sugar, means it only provide the syntax
+- Object DE-structuring helps in avoiding the repeatability of the code
+- In Object DE-structuring, we are extracting the property from object
+- We can rename the DE-structure value using colon :
 - When we go to the restaurant and order something, the menu card is API Documentation
-- When we order 'Samosa', we should not worry how it is made, just we have cOnsume it, Somosa is created at the backend, same goes with API.
+- When we order 'Samosa', we should not worry how it is made, just we have consume it, Samosa is created at the backend, same goes with API.
 - JSON is almost written like object, but key, value pair are stored in string
         ```json
         {
@@ -403,7 +403,7 @@
         }
         ```
 - Use the url : https://api.github.com/users/hiteshchoudhary
-- Use the API ➜ As the value is into JSON ➜ convert in javascript object ➜ use it, enjoy
+- Use the API ➜ As the value is into JSON ➜ convert in JavaScript object ➜ use it, enjoy
 - **Famous API:** Random user me: https://randomuser.me/ ➜ use https://randomuser.me/api/
 - We can beautify the JSON using JSON Formatter online editor: https://jsonformatter.org/ ➜ we can beautify the JSON and check it into tree structure ➜ after this we can see how can we deal with it, may be using array or object
 
@@ -415,19 +415,19 @@
 ![DOM](/src/images/function.png)
 
 - While learning about functions, it is important to know about memory management as well.
-- Function means, what the 10, 20 etc lines of code you have writte, we kept in package
-- We can resue the package, as much as we want
-- To write a function, we give function keywoes, function name, then pranthesis then scope of function, this is called function defination
+- Function means, what the 10, 20 etc lines of code you have write, we kept in package
+- We can reuse the package, as much as we want
+- To write a function, we give function keyword, function name, then parenthesis then scope of function, this is called function 	definition
 - To call the function, we function name with parenthesis, then function will execute it.
-- In javascript, it automatically check the datatype of value, so it is important to check the type of any variable before doing any operations
-- **function parameter :** while creating the function defination, whatever the inputs we take, we call it as parameters
+- In JavaScript, it automatically check the datatype of value, so it is important to check the type of any variable before doing any 	operations.
+- **function parameter :** while creating the function definition, whatever the inputs we take, we call it as parameters
 - **function arguments:** The values which we pass in the function call, we call it as an argument
 - It is important to know, what we are sending form the function
 - **Note:** Whatever you write after function return, nothing will work
 - undefined and "" empty string is considered as false value
 - So to check the error, check with false value ➜ Example:  if(!username)
 - We can give default value in function parameter with equals to, Example loginUserMessage(username = "sam")  ➜ it will avoid to go into error check, if no username available
-- **Rest Operator:** ... when these 3 dots comes in parameter, it means get all the values and give me in bundle.
+- **Rest Operator:** ... when these 3 dots comes in parameter, it means get all the values are give me in bundle.
 - **Example:** Get all the values in cart value
 
 <hr/>
@@ -439,7 +439,7 @@
 - **{} :**  This is called as scope
 - When {} comes with function or if, then we called its scope
 - When any thing declared inside {} it is called block scope, and outside of {} is called global scope
-- value declare in global scope ➜ it is available in block scope but value declaredin block scope is not available in global scope.
+- value declare in global scope  it is available in block scope but value declared in block scope is not available in global scope.
 - var is functional scope, where as const, let are block scope.
 - Global scope is different for node environment and browser
 
@@ -448,10 +448,10 @@
 
 ## Lecture 20: Scope level and mini hoisting
 
-- {} Is only scope in javascript ha
-- Kids can ask ice cream from elder but it is awekword if elder ask the ice cream from kids
+- {} Is only scope in JavaScript ha
+- Kids can ask ice cream from elder but it is awkward if elder ask the ice cream from kids
 - It means, inner function can access the variable from outside but outside function cant ask inner member variables etc
-- Variable declared inside the insode function cant be access outside function
+- Variable declared inside the  function cant be access outside function
 - Every time function is called, then every time it is kept in stack
 - Closure in simple line, the inner function can access the outside declared variable
 - There are 2 technique to create a function, using bassic function, other is function expression

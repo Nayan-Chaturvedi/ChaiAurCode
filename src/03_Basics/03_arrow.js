@@ -9,17 +9,17 @@ const user = {
   }
 };
 
-// user.welcomeMessage();
+// user.welcomeMessage();		// hitesh Welcome to website
 // user["username"] = "sam"
-// user.welcomeMessage();
+// user.welcomeMessage();		// sam Welcome to website
 
-// console.log(this);
+// console.log(this);			//	 In Brower there is a global object called window object
 
 //Not able to access this keyword in normal function
 /*
 function chai(){
     let username = "hitesh"
-    console.log(this.username);
+    console.log(this.username);	// Not accessible.  output :  undefined
 }
 chai();
 */
@@ -53,9 +53,9 @@ const addTwo = (num1, num2) => {
 // const addTwo = (num1, num2) => num1 + num2;
 
 // arrow function with paranthesis
-const addTwo = (num1, num2) => num1 + num2;
+const addTwo = (num1, num2) => (num1 + num2);
 console.log(addTwo(5, 6));
 
 // arrow function with object return using implicit return
 const sampleaddTwo = (num1, num2) => ({ username: "hitesh" });
-console.log(sampleaddTwo(3, 4));
+console.log(sampleaddTwo(3, 4));		// username: "hitesh"

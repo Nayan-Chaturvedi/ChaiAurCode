@@ -7,7 +7,7 @@ function sayMyName() {
   console.log("H");
 }
 
-// sayMyName();
+// sayMyName();		// Calling function
 
 // function addTwoNumbers(number1, number2){
 //     console.log( number1 + number2 );
@@ -30,16 +30,25 @@ function loginUserMessage(username = "sam") {
   }
   return `${username} just logged in`;
 }
-// console.log(loginUserMessage("hitesh"))
-// console.log(loginUserMessage())
+// console.log(loginUserMessage("hitesh"))	// hitesh just logged in
+// console.log(loginUserMessage())		// sam just logged in (Yaha hamane argument me koi value nahi daali hai, jab koi value 								argument me nahi hogi tab by default sam consider kar lega)
 
 //------------ function with objects ------------------
 
-function calculatetCartPrice(val1, val2, ...num1) {
+
+function calculateCartPrice(...num1)
+{
+	return num1;
+}
+
+console.log(calculatetCartPrice(200, 400, 500, 2000));		 //	[200, 400, 500, 2000]
+
+function calculatetCartPrice(var1, var2, ...num1) {
   return num1;
 }
 
-// console.log(calculatetCartPrice(200, 400, 500, 2000));
+// console.log(calculatetCartPrice(200, 400, 500, 2000));	// [400, 500] becuase va1 contain 200 and var2 contain 400. we here return
+								//	num1 . num1 contain 500 and 2000
 
 const user = {
   username: "hitesh",
@@ -53,6 +62,7 @@ function handleObject(anyObject) {
 }
 
 // handleObject(user);
+
 // we can pass the object directly
 
 handleObject({
