@@ -11,7 +11,7 @@ console.log(values); */
 //filter
 /* const myNums = [1,2,3,4,5,6,7,8,9,10]
 //scenario: filter the values which are greater then 1
-const newNums = myNums.filter((num)=>(num > 4));
+const newNums = myNums.filter((num)=>(num > 4));	// num > 4 yaha khud return ho raha hai. agar aap {} lagate tab aapko return 								//	keyword likhna hota	
 
 console.log(newNums); */
 

@@ -27,10 +27,10 @@ if (Object.keys(emptyObj).length === 0) {
 
 //------------------------ Nullish Coalescing Operator ?? ---------------------
 let val1;
-// val1 = 5 ?? 10;
-// val1 = null ?? 10;
-// val1 = undefined ?? 15
-val1 = null ?? 10 ?? 20;
+// val1 = 5 ?? 10;		// Jo first value hoti hai wahi assign hogi. ye usually null/ undefined ke liye bna hai output = 5	
+// val1 = null ?? 10;		// first value is : 10		
+// val1 = undefined ?? 15	// first value is : 15	
+val1 = null ?? 10 ?? 20;	// first value is : 10
 
 console.log(val1);
 

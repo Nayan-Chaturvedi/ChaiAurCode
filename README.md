@@ -454,8 +454,8 @@
 - Variable declared inside the  function cant be access outside function
 - Every time function is called, then every time it is kept in stack
 - Closure in simple line, the inner function can access the outside declared variable
-- There are 2 technique to create a function, using bassic function, other is function expression
-- Hositing is not possible with function expression, but hoisting is possible with basic function only
+- There are 2 technique to create a function, using basic function, other is function expression
+- Hoisting is not possible with function expression, but hoisting is possible with basic function only
 
 <hr/>
 <br/>
@@ -467,27 +467,27 @@
 - this keyword tells about current context
 - When we refer to the current context of the object, we use this keyword
 - In node environment, current object refer to empty object
-- Node javascript engine is stand alone, earlier javascript engine is in a browser
-- In brower there is a global object called window object
-- this keyword is not accessible in noraml function and function expression (doubt)
+- Node JavaScript engine is stand alone, earlier JavaScript engine is in a browser
+- In Brower there is a global object called window object
+- this keyword is not accessible in normal function and function expression (doubt)
 - To write arrow function, replace function keyword with qual and arrow in function expression
 - **Note:** this keyword can be accessible in normal function, act as a global object but not in arrow function
 - **syntax of arrow function:** const sampleArrowFunction = ()=> {}
 - **Implicit Return:** when arrow function is 1 liner, then we consider it as implicit return and no need to write the return keyword
-- if use curly braces, ➜ then need to use return. If we use paranthesis, then no need to add the return keyword.
+- if use curly braces, ➜ then need to use return. If we use parenthesis, then no need to add the return keyword.
 - To return the object, we should wrap in parenthesis
 
 <hr/>
 <br/>
 
-## Lecture 22: Immedietly Invoked function
+## Lecture 22: Immediately Invoked function
 
-- The function which has its own scope and executed immideitly
-- **IIFE:** Function defination is wrapped in paranthesis and use empty parenthesis for execution: ()()
+- The function which has its own scope and executed immediately
+- **IIFE:** Function definition is wrapped in parenthesis and use empty parenthesis for execution: ()()
 - Note: To avoid the use of global variable, as global variable pollute the variable, so we use IIFE
 - Note: To stop the IIFE, It is important to add the semicolon after IIFE
 - We can write IIFE using normal function as well as arrow function
-- Remember 2 IIFE can be written by seperating semicolon
+- Remember 2 IIFE can be written by separating semicolon
 
 <hr/>
 <br/>
@@ -591,7 +591,7 @@
   #### Truthy & flasy values
   
   - Any value added in string is truthy value
-  - [] empty arry, empty object are truthy value
+  - [] empty array, empty object are truthy value
   - If only function is declared, then that is also truthy value
   - Object.key() will return the array
   - **Remember:** it is true comparison below
@@ -599,15 +599,18 @@
     - false == '' ➜ true
     - 0 == '' ➜ true
     - && || are called logical operator
+	
+	Falsy values = false, 0, BigInt, "", null, undefined, NAN
+	Truthy values = "0", 'false', " ",[], {}, function(){}	// empty function
 
   #### Nullish Coalescing Operator (??)
   
   - Need to focus on Null and undefined values
-  - ?? it will check the safty value, based on null or undefined it will assign some other value
+  - ?? it will check the safety value, based on null or undefined it will assign some other value
   - While using ?? operator twice, it will take the 1st assigned value, Example: null ?? 10 ?? 10 ➜ output: 10
   - ?? is basically used to handle errors
   - nullish and null operator are 2 different thing
-  - Ternary operator: it is short cut of writing if else statement
+  - Ternary operator: it is short cut of writing if-else statement
   - Syntax: condition ? true : false
 
 <hr/>
@@ -619,7 +622,7 @@
 
 - use ctrl + d : to select the multiple value at once
 - To stop any control, we use break keyword
-- continue is like, sorry for 1 time (means skip when the condition match) and continue the process remain
+- continue is like, sorry for 1 time (means skip when the condition match) and continue the process remain 
 
 <hr/>
 <br/>
@@ -628,14 +631,14 @@
 
 - There are many loops, there are different ways to solve the problem.
 - Logically, we need to do the same, what we did in for loop, like initialisation, checking condition, increment or decrement
-  ```javascript
+  ```JavaScript
     // While syntax
     while(condition){
-        // if above condition is match, then execute the statment
+        // if above condition is match, then execute the statement
     }
   ```
 - Readability of the code is very important
-  ```javascript
+  ```JavaScript
       //do while syntax
       do{
           //statement
@@ -643,7 +646,7 @@
       }while(condition)
   ```
 - In do-while, work is done first then later condition is checked
-- Mostly we dont use d0-while loop, as we check the condition first
+- Mostly we dont use do-while loop, as we check the condition first
 - It is very very common to loop the array, as the API Value, DB values comes in the form of array
 
 <hr/>
@@ -664,7 +667,7 @@
 
         }
   ```
-- Above object is used as a broader term, it means, on what you want to use loop, dont confused with javascript object
+- Above object is used as a broader term, it means, on what you want to use loop, don't confused with javascript object
 - In for...of loop, there is no need to worry about initialisation, increment or decrement.
 - Instead of giving names like i,j, it is better to use meaningful name, like greetings, greet, numbers, num etc
 - Map is use to store key, value pair
@@ -732,7 +735,7 @@
 
   #### reduce():
   - Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
-  - Whatever we give the initial value, it goes into accumulator
+  - Whatever we give the initial value, it goes into accumulator(empty variable)
   - Reduce will work on entire array
   - In reduce methods, we get 2 parameter, one is accumulator and other is current value
   - We can assign the value from which we want to start the value in accumulator
