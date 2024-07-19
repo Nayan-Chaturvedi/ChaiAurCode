@@ -7,23 +7,22 @@
 
 ## Object
 
-- Object is a collection of properties(variables) and methods
+- Object is a collection of properties(variables) and methods(function)
   - example: promise, toLowerCase
 
 ## Why we need OOP
 
-- We can have reusabilites, create services etc
+- We can have reusability, create services etc
 
 ## Parts of OOP
 
-- Object literal {} : as we say it is literally 2 means, it only 2
+- Object literal {} : Object literal ka matlab hai ki hum directly ek object ko define karte hain bina kisi constructor function ya class ke.
 - Constructor function
 - Prototypes
 - Classes
 - Instances (new, this)
 
-- Ask chatgpt
-- Learn 4 keywards of OOP
+
 
 ## 4 Pillars
 

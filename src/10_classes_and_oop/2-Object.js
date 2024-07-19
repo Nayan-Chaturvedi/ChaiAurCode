@@ -2,11 +2,11 @@ function multiplyByFive(num) {
   return num * 5;
 }
 
-multiplyByFive.power = 2;
+multiplyByFive.power = 2;		//. operator to object ke sath lagta hai per yaha multiplyByFive ke function hai. which means 						// function bhi ek object hai
 
-console.log(multiplyByFive(5));
-console.log(multiplyByFive.power);
-console.log(multiplyByFive.prototype);
+console.log(multiplyByFive(5));		//25
+console.log(multiplyByFive.power);	//2
+console.log(multiplyByFive.prototype);	//{}
 
 function createUser(username, score) {
   this.username = username;

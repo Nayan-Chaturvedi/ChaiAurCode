@@ -759,7 +759,7 @@
 - As window.document is so common object, so we can access document object directly as well console.log(document)
 - console.dir(document) it will give all the hidden details as well, that were missing using console.log(document)
 - <!DOCTYPE html> will only tell what type of html page it is
-- In DOM, everything is node, like head, bodt etc
+- In DOM, everything is node, like head, body etc
   
 ![DOM](/src/images/DOM.png)
 
@@ -784,9 +784,9 @@ document.getElementById('firstHeading').innerHTML = "<h1>Chai aur code<h1/>"
 
 ## Lecture 2: All DOM Selector
 
-- Open wiki page of ajavascript, as the wiki page is created so cleanly
+- Open wiki page of a JavaScript, as the wiki page is created so cleanly
 - We will see here, what element we can catch, and what the things we can do manipulate it.
-- Focus on Javascript rather than react, angular, sevelt, who knows future
+- Focus on Javascript rather than react, angular, servlet, who knows future
 - Focus on selecting element then apply methods to manipulate it.
 - Behind the scene, document understand it as className not class
 - we can get the attibute using:
@@ -822,9 +822,9 @@ document.getElementById('firstHeading').innerHTML = "<h1>Chai aur code<h1/>"
 - **Example:**
   ```javascript
     document.querySelector('#title');
-    //we can use othe selectors as well, like class selector
+    //we can use other selectors as well, like class selector
     document.querySelector('.heading');
-    // we can select the input slector as well
+    // we can select the input selector as well
     document.querySlector(input);
     //we can select the attribute as well
     document.querySelector('input[type="password"]')
@@ -946,8 +946,8 @@ document.getElementById('firstHeading').innerHTML = "<h1>Chai aur code<h1/>"
 
 ## Lecture 6: Events in Javascript
 
-- Whatever the eventd run in the javascript, it runs in sequentially
-- But in asynchronous programming, we deviate the sequence and come back, same like browser event, it acitivate in browser events.
+- Whatever the event run in the javascript, it runs in sequentially
+- But in asynchronous programming, we deviate the sequence and come back, same like browser event, it activate in browser events.
 - Write a logic that is scalable in javascript, so better avoid writing onclick on button in js.
 - Dont write simply onclick event but use addEventListener, as it will give much detail like propogation, or gives less features if use onclick.
 - Add the event listener in string.
@@ -971,11 +971,11 @@ document.getElementById('firstHeading').innerHTML = "<h1>Chai aur code<h1/>"
 - We will focus on basic on sync javascript, so that It will be helpful to learn promises, async-await etc
 - We should know basics like, Javascript is
   1) Synchronous: Execute one line of code at a time.
-  2) Single threaded languge: Work on 1 thread, slow language as compared to other
+  2) Single threaded language: Work on 1 thread, slow language as compared to other
   3) Execution context: Execute one line of code at a time. Here Each operation waits for the last one to complete before executing
 - There are 2 types of code in javascript
   1) Blocking Code: Block the flow of the program ➜ Read the file
-  2) Non-Blocking Code:Does not block execution ➜ Read file Async
+  2) Non-Blocking Code: Does not block execution ➜ Read file Async
 - It is based on the use case, what code we need to use either blocking or non blocking
 - Example for non blocking code, till we store the data in db and get response that entry is done ➜ then give the message to the user that registration is successful or not, then we should go ahead with non blocking operation.
 - JS Engine: It is a complete javascript engine, which execute the javascript
@@ -1114,9 +1114,12 @@ document.getElementById('firstHeading').innerHTML = "<h1>Chai aur code<h1/>"
 ## ------------------------ Classes & Objects : (bit theory) ------------------------
 
 ##  Lecture 12: Object Oriented Javascript
-- Technically javascript is not having class but yes javascript does have classes. class is afeature of ES6.
-- We should use chatGPT while working in javascript or react.
+- Technically javascript is not having class but yes JavaScript does have classes. class is a feature of ES6.
 - Javascript is a prototyped based language, it is syntactic sugar over existing prototype based inheritance mechanism.
+
+(Explain = Bilkul! JavaScript ek prototype-based language hai. Matlab, isme objects aur inheritance ko handle karne ka tareeka prototype ke through hota hai. Jab hum kehte hain ki JavaScript "syntactic sugar" use karta hai, iska matlab hai ki kuch features ko use karna aur likhna asaan banane ke liye kuch extra syntax diya gaya hai, lekin andar se woh wahi purana prototype-based inheritance hi use karta hai.
+
+Yeh bilkul waise hi hai jaise hum ek complex cheez ko simplify karne ke liye uska ek shortcut bana lete hain. Toh, JavaScript mein jo classes aur inheritance ka concept hai, woh actually prototypes par hi based hai, bas usko likhne ka tareeka thoda asaan kar diya gaya hai.)
 
 ### Object literal: 
 -  Create the object literally
@@ -1132,8 +1135,8 @@ document.getElementById('firstHeading').innerHTML = "<h1>Chai aur code<h1/>"
 - With the help of new keyword, we can create multiple instances, And we call it as constructor function.
 - the left hand side shows the variable name and right side shows the value.
 - When we use new keyword, empty object is created.
-- Constrcutor function is called on new call
-- this keyword is injected
+- Constructor function is called when new call
+- this keyword is implicit injected on constructor function
 
 <hr />
 <br />
@@ -1145,12 +1148,13 @@ document.getElementById('firstHeading').innerHTML = "<h1>Chai aur code<h1/>"
   const newHero = ["Hulk","spiderman"]
   console.log(newHero);
   ```
-- Here, when we console the output, we not only get the array element but we get the Prototype keyward as well, we will explore it more.
-- Javascript is prototypal inheritance:  Javascript search at the top till it gets null value.This is prorypal behaviour of javascript
-- Due to prototype bahviour only, we get new keyward, classes and this key works due to this.
+- Here, when we console the output, we not only get the array element but we get the Prototype keyword as well, we will explore it more.
+- Javascript is prototypal inheritance:  Javascript search at the top till it gets null value.This is prototype behaviour of javascript.
+(Explain =JavaScript mein prototypal inheritance ka matlab hai ki objects ek doosre objects se inherit kar sakte hain. Jab hum kisi property ya method ko access karte hain, JavaScript pehle current object mein search karta hai. Agar wahan nahi milta, toh uske prototype mein search karta hai, aur yeh process tab tak chalta rehta hai jab tak ya toh property mil jaye ya phir prototype chain null tak pahunch jaye.)
+- Due to prototype behavior only, we get new keyword, classes and this key works due to this.
 - Everything in javascript is Object, Object is no parent ➜ Object has null reference
-- Srting, Array redirect to object, means it is object.
-- Function is a function as well as it is object in javascript
+- String, Array redirect to object, means it is object.
+- Function is a function as well as it is object in javascript.
 - From 'this', we set the current context
 - **prototype:** it gives not only methods but also gives some proprties as well.
 - All about 'new' keyword:
