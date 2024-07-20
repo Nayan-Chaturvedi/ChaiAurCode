@@ -28,5 +28,5 @@
 
 - Abstracction: Hide the internal details and give the abstraction
 - Encapsulation: Wrap up the data so no one can access it, whatever we need methods we hide it.
-- Inheritance:
+- Inheritance:	
 - Polymorphism: made up of 2 words, poly and morphism. 1 method will do many work

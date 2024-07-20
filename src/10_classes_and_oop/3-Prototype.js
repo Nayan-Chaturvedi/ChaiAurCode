@@ -27,7 +27,8 @@ Array.prototype.heyHitesh = function () {
   console.log(`Hitesh says hello`);
 };
 
-// heroPower.heyHitesh();
+// heroPower.heyHitesh();		// heroPower ke pass heyHitesh() ka access nahi hai kyoki hamne Array.prototype.heyHitesh na ki
+					//	Object.prototype.heyHitesh kiya hai. object upper layer hai. jo hum object par lagaege vo 					//	byDefault sab me available rahega 
 //myHero.heyHitesh(); //array can access the method
 
 //------------------------------ Inheritance:

@@ -92,7 +92,7 @@
 - We can reserve the variable without using any keyword as well, but it is not good practice
 	eg : accountId =21
 - In js, semicolon is optional
-- Defualt value of let is undefined
+- Default value of let is undefined
 
 
 <hr/>
@@ -552,20 +552,20 @@
 
 ## Lecture 24: Control flow 
 
-- In if statement, if the condition is true then only code will execude for if statement
-- If statment will be having comparison statement
+- In if statement, if the condition is true then only code will execute for if statement
+- If statement will be having comparison statement
 - Following are the comparator operators checking:
 - Less then < ➜ Example: 10 < 20 ➜ check 10 is less then 20, yes it is, so output: true
-- Greated then >
+- Greater then >
 - Less then and equal to <=
 - greater then and equal to >=
-- Equal to ==, note single operator is assignmnet operator, Example: const isLoggedIn = true, means true is assigned to isLoggedIn, but here == is comparison operator
-- Not Eqaul != ➜ 3 !=2 ➜ -ve checking ➜ 3 is not equal to 2 ➜ output: true
+- Equal to ==, note single operator is assignment operator, Example: const isLoggedIn = true, means true is assigned to isLoggedIn, but here == is comparison operator
+- Not Equal != ➜ 3 !=2 ➜ -ve checking ➜ 3 is not equal to 2 ➜ output: true
 - === will check the type and value, it is strict equality check
 - !== It will do -ve type and value checking
 - else is conditional code, it will executed either if statement or else statement
 - Scope is counted in curly braces {}
-- var scope is compltely global, it means, it accessable outside {} as well
+- var scope is completely global, it means, it accessible outside {} as well
 - **&& :** and condition will check both left and right condition
 - **Example:** Do you need to buy phone and cover ➜ yes
 - If any of the condition is wrong in &&, the block will not get executed
@@ -583,17 +583,16 @@
             break;
     }
     ```
-  - Here key is the condition, we need to check everytime
-  - Use intellesence or seuggestion in vscode for switch case
-  - If nothing match, then default case will be excuted
+  - Here key is the condition, we need to check every time.
+  - If nothing match, then default case will be executed.
   - whenever, key is match rest all code will be executed, so we give break to avoid limited details to show
 
   #### Truthy & flasy values
   
-  - Any value added in string is truthy value
-  - [] empty array, empty object are truthy value
+  - Any value added in string is truthy value.
+  - [] empty array, empty object are truthy value.
   - If only function is declared, then that is also truthy value
-  - Object.key() will return the array
+  - Object.key() will return the array of key
   - **Remember:** it is true comparison below
     - false == 0 ➜ true
     - false == '' ➜ true
@@ -603,12 +602,26 @@
 	Falsy values = false, 0, BigInt, "", null, undefined, NAN
 	Truthy values = "0", 'false', " ",[], {}, function(){}	// empty function
 
+ #### Object.key(obj) 
+	example--
+			const obj=
+			{
+ 		 	  a : 'Nayan',
+ 		 	  b : 'Kumar',
+ 		 	  c : 'Chaturvedi'
+			}
+
+		console.log(Object.keys(obj));		// ['a', 'b', 'c']
+
+console.log(Object.keys(obj));
+	
+
   #### Nullish Coalescing Operator (??)
   
   - Need to focus on Null and undefined values
   - ?? it will check the safety value, based on null or undefined it will assign some other value
-  - While using ?? operator twice, it will take the 1st assigned value, Example: null ?? 10 ?? 10 ➜ output: 10
-  - ?? is basically used to handle errors
+  - While using ?? operator twice, it will take the 1st assigned value, Example: null ?? 10 ?? 20 ➜ output: 10
+  - ?? is basically used to handle errors.
   - nullish and null operator are 2 different thing
   - Ternary operator: it is short cut of writing if-else statement
   - Syntax: condition ? true : false
@@ -634,7 +647,7 @@
   ```JavaScript
     // While syntax
     while(condition){
-        // if above condition is match, then execute the statement
+        // if above condition is match, then execute the statement++***
     }
   ```
 - Readability of the code is very important
@@ -759,8 +772,15 @@
 - As window.document is so common object, so we can access document object directly as well console.log(document)
 - console.dir(document) it will give all the hidden details as well, that were missing using console.log(document)
 - <!DOCTYPE html> will only tell what type of html page it is
-- In DOM, everything is node, like head, body etc
-  
+- In DOM, everything is node, like head and body etc
+- console.log(document.baseURI)= ye hame web page ka base url provide karta hai.
+- console.log(document.links) = Hamari web page par sabhi links provide karta hai
+- console.log(document.links[1]) = hame 1 index ki link retun karega	
+-  document.getElementById() = JavaScript ka ek method hai jo HTML document mein kisi specific ID wale element ko dhoondhne ke liye use                 hota hai.
+-document.getElementById("siteSub").innerHTML="<h1>Nayan</h1>"=document.getElementById("siteSub"): Yeh line HTML document mein id “siteSub” wale        element ko dhoondti hai.
+.innerHTML="<h1>Nayan</h1>": Yeh line us element ke andar ka HTML content change karke <h1>Nayan</h1> set karti hai, jo ki “Nayan” ko heading 1 format mein display karega.
+
+
 ![DOM](/src/images/DOM.png)
 
 - We can go to wiki page, search for Brandan Eich, here we can search of id, firstHeading
@@ -776,8 +796,7 @@
 document.getElementById('firstHeading').innerHTML = "<h1>Chai aur code<h1/>"
 ````
 
-- So in this we can add, remove, apply filters to the element in DOM manipulation
-- Learn all the above basic rather focusing on any framework 
+- So in this we can add, remove, apply filters to the element in DOM manipulation 
  
 <hr/>
 <br/>
@@ -789,7 +808,16 @@ document.getElementById('firstHeading').innerHTML = "<h1>Chai aur code<h1/>"
 - Focus on Javascript rather than react, angular, servlet, who knows future
 - Focus on selecting element then apply methods to manipulate it.
 - Behind the scene, document understand it as className not class
-- we can get the attibute using:
+  
+example -
+	document.getElementById("title").id
+	output=	'title'
+	document.getElementById("title").class
+	output=	undefined
+	document.getElementById("title").className
+	output ='heading'
+
+- we can get the attribute using:
   
 ```javascript
   document.getElementById('title').getAttribute('id')
@@ -800,7 +828,7 @@ document.getElementById('firstHeading').innerHTML = "<h1>Chai aur code<h1/>"
   document.getElementById('title').setAttribute('class','test heading')
 ```
 
-- here, new class is test, existing class is heading
+- here, new class is test heading, existing class is heading
 - We can set the styling of element as below,
   
 ```javascript
@@ -809,30 +837,34 @@ document.getElementById('firstHeading').innerHTML = "<h1>Chai aur code<h1/>"
 ```
 
 ### How to add the content
-- We will be using textContent, innerHTML, innerText
+- We will be using textContent/ innerContent, innerHTML, innerText
 - **InnerContent vs InnerText:** InnerText will give the text which is visible, but InnerContent will give the text which is hidden as well.
 - innerHTML will give the complete value
 - In real time, we will be using other query selector, like querySelector, querySelectorAll etc
 **Example:**
   ```javascript
-    document.querySlector('h1')
+    document.querySelector('h1')
     //we will be getting the 1st h1 element
   ```
 - querySelector is quite similar to jquery
 - **Example:**
   ```javascript
-    document.querySelector('#title');
+    document.querySelector('#title'); // Select id
+
     //we can use other selectors as well, like class selector
-    document.querySelector('.heading');
+    document.querySelector('.heading');	//Select class
+
     // we can select the input selector as well
     document.querySlector(input);
+
     //we can select the attribute as well
     document.querySelector('input[type="password"]')
+
     //select 1st child of paragraph
     document.querySelector('p:first-child');
   ```
   - Try to use emmet shortcuts, how sir is using,
-    **Example:** To write 3 list item, use ul>;i*3
+    **Example:** To write 3 list item, use ul>;l*3
   - We can select element and manipulate the element as below
   **Example:**
   ```javascript
