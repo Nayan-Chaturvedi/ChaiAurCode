@@ -246,12 +246,117 @@
 
 	- Toh str object ke paas __proto__ property hoti hai jo String.prototype ko refer karti hai. String.prototype mein saare string methods available hote hain, jaise toUpperCase(), toLowerCase(), charAt(), etc.
 - If we use methods related to **__proto__** then original value is not changed.
+
+	**Example**
+	```javascript
+		let str = "hello";
+		let upperStr = str.toUpperCase();
+
+		console.log(str);       // Output: "hello"
+		console.log(upperStr);  // Output: "HELLO"
+		```
+
+- Is example mein:
+
+	- str ek original string hai jiska value “hello” hai.
+	- Jab aap str.toUpperCase() call karte ho, yeh method ek nayi string “HELLO” return karta hai bina str ko modify kiye.
+	- Isliye, str ka original value “hello” hi rehta hai, aur upperStr mein nayi value “HELLO” store hoti hai.
 - we can check what character available we use charAt(index)
 - **indexOf('character') :** we can get the index of the character
 - **substring(0,4)** the last value is excluded.
 - **trim() :** this method is used to remove the unwanted space, mostly it is used in filling the form
 - **split('-') :** split method is used to split with specified digit and gives the output in arrays
 
+-  Creating a String object using new keyword is allowed, but is not recommended as it behaves like Objects unlike
+ primitive strings.
+```javascript
+ var objectString = new String("Yes, I am a String object");
+ typeof objectString;//"object"
+ typeof objectString.valueOf();//"string"
+```
+
+**Program**
+
+- Reverse String
+	```javascript
+		function name(str)
+    {
+       return str.split('').reverse().join('')
+    }
+
+    console.log(name("String"));
+	```
+**Explanation**
+	- split(‘’): str.split('') splits the string str into an array of individual characters.
+	For example, 'string'.split('') results in ['s', 't', 'r', 'i', 'n', 'g'].
+	- reverse(): The reverse() method reverses the order of elements in the array.
+	For example, ['s', 't', 'r', 'i', 'n', 'g'].reverse() results in ['g', 'n', 'i', 'r', 't', 's'].
+	- join(‘’):
+	The join('') method joins all elements of the array into a single string.
+	For example, ['g', 'n', 'i', 'r', 't', 's'].join('') results in 'gnirts'.
+
+**Custom reverse() function**
+```javascript
+ function reverse(string) {
+    var strRev = "";
+    for (var i = string.length - 1; i >= 0; i--) {
+        strRev += string[i];
+    }
+    return strRev;
+ }
+ reverse("zebra");  // "arbez"
+```
+
+**Strings Lexicographically**
+
+ - To compare strings alphabetically, use localeCompare(). This returns a negative value if the reference string is
+  lexicographically (alphabetically) before the compared string (the parameter), a positive value if it comes
+  afterwards, and a value of 0 if they are equal.
+```javascript
+ var a = "hello";
+ var b = "world";
+ console.log(a.localeCompare(b)); // -1
+```
+ - The > and < operators can also be used to compare strings lexicographically, but they cannot return a value of zero
+ (this can be tested with the == equality operator). As a result, a form of the localeCompare() function can be
+ written like so:
+```javascript
+ function strcmp(a, b) {
+    if(a === b) {
+        return 0;
+    }
+    if (a > b) {
+        return 1;
+    }
+    return -1;
+ }
+ console.log(strcmp("hello", "world")); // -1
+ console.log(strcmp("hello", "hello")); //  0
+ console.log(strcmp("world", "hello")); //  1
+```
+ - This is especially useful when using a sorting function that compares based on the sign of the return value (such as
+ sort).
+```javascript
+ var arr = ["bananas", "cranberries", "apples"];
+ arr.sort(function(a, b) {
+    return a.localeCompare(b);
+ LearnLoner.com
+});
+ console.log(arr); // [ "apples", "bananas", "cranberries" ]
+```
+
+- sort() Method: arr.sort(function(a, b) { return a.localeCompare(b); });
+sort() method array ko sort karne ke liye use hota hai.
+Yahaan ek custom comparison function diya gaya hai jo localeCompare method use karta hai.
+- localeCompare() Method: a.localeCompare(b) strings a aur b ko lexicographically (dictionary order) compare karta hai.
+Agar a pehle aata hai b se, toh negative value return karta hai.
+Agar a aur b equal hain, toh zero return karta hai.
+Agar a baad mein aata hai b se, toh positive value return karta hai.
+- Sorting: sort() method custom comparison function ko use karke array ko sort karta hai.
+Is case mein, “apples” pehle aata hai, phir “bananas”, aur phir “cranberries”.
+- Output:
+console.log(arr); sorted array ko print karta hai.
+Output: [ "apples", "bananas", "cranberries" ]
 
 <hr/>
 <br/>
