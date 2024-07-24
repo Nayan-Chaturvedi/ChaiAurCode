@@ -1304,8 +1304,6 @@ Yeh bilkul waise hi hai jaise hum ek complex cheez ko simplify karne ke liye usk
     innerFunction();
 }
 outerFunction(); // Output: I am outside!
-
-
  ```
 - innerFunction outerVariable ko access kar sakta hai kyunki lexical scoping ke wajah se
 
@@ -1329,7 +1327,6 @@ outerFunction(); // Output: I am outside!
 
 const myFun = makeFun();
 myFun(); // Output: Nayan
-
  ```
 - **Explanation**:
 - Function Definition:
@@ -1345,7 +1342,7 @@ Jab myFun() ko call kiya jata hai, yeh displayName function ko execute karta hai
 Simple Summary:
 Closure: displayName function apne parent function makeFun ke name variable ko access kar sakta hai, even after makeFun function execute ho chuka hai. Yeh closure ka power hai.
 
-- **Simple Summary **
+- **Simple Summary**
 	**Lexical Scope:** Function apne outer scope ke variables ko access kar sakta hai.
 	**Closure:** Function apne parent scope ke variables ko access kar sakta hai, even after parent function execute ho chuka ho.
 
