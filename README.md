@@ -1303,9 +1303,9 @@ Yeh bilkul waise hi hai jaise hum ek complex cheez ko simplify karne ke liye usk
 
     innerFunction();
 }
-
-
 outerFunction(); // Output: I am outside!
+
+
  ```
 - innerFunction outerVariable ko access kar sakta hai kyunki lexical scoping ke wajah se
 
@@ -1315,6 +1315,7 @@ outerFunction(); // Output: I am outside!
 - It is not possible to access the variable declared inside function to outside of function.
 - While we return the function reference, we return the whole lexical scope, means it return the variable as well.
 - example
+
 ```javascript 
 	function makeFun() {
     const name = "Nayan";
@@ -1330,15 +1331,15 @@ const myFun = makeFun();
 myFun(); // Output: Nayan
 
  ```
-- ** Explanation**
-	Explanation:
-Function Definition:
-makeFun function ke andar ek name variable define kiya gaya hai jiska value “Nayan” hai.
-makeFun ke andar ek aur function displayName define kiya gaya hai jo name variable ko console mein print karta hai.
-Closure Creation:
-Jab makeFun function ko call kiya jata hai, yeh displayName function ko return karta hai.
+- **Explanation**:
+-Function Definition:
+-makeFun function ke andar ek name variable define kiya gaya hai jiska value “Nayan” hai.
+-makeFun ke andar ek aur function displayName define kiya gaya hai jo name variable ko console mein print karta hai.
+
+-Closure Creation:
+-Jab makeFun function ko call kiya jata hai, yeh displayName function ko return karta hai.
 displayName function ko return karte waqt, yeh apne parent scope (yani makeFun function) ke variables ko “yaad” rakhta hai. Is process ko closure kehte hain.
-Function Call:
+-Function Call:
 const myFun = makeFun(); line mein, makeFun function ko call kiya gaya aur displayName function ko myFun variable mein store kiya gaya.
 Jab myFun() ko call kiya jata hai, yeh displayName function ko execute karta hai jo name variable ko console mein print karta hai.
 Simple Summary:
