@@ -1551,7 +1551,7 @@ undefined
 - NaN stands for "Not a Number." When a mathematical function or operation in JavaScript cannot return a specific
  number, it returns the value NaN instead.
 
-** undefined and null**
+**undefined and null**
 
 - javaScript mein undefined ka matlab hota hai ki kisi variable ko declare toh kiya gaya hai, lekin usme koi value assign nahi hui hai. Yeh compiler ko batata hai ki yahan ek value expected thi, lekin abhi tak koi value assign nahi hui.
 
@@ -1563,3 +1563,6 @@ undefined
 ```javascript
  typeof null === 'object'
 ```
+
+<hr />
+<br />
