@@ -1332,12 +1332,12 @@ myFun(); // Output: Nayan
 
  ```
 - **Explanation**:
--Function Definition:
--makeFun function ke andar ek name variable define kiya gaya hai jiska value “Nayan” hai.
--makeFun ke andar ek aur function displayName define kiya gaya hai jo name variable ko console mein print karta hai.
+- Function Definition:
+makeFun function ke andar ek name variable define kiya gaya hai jiska value “Nayan” hai.
+makeFun ke andar ek aur function displayName define kiya gaya hai jo name variable ko console mein print karta hai.
 
 -Closure Creation:
--Jab makeFun function ko call kiya jata hai, yeh displayName function ko return karta hai.
+Jab makeFun function ko call kiya jata hai, yeh displayName function ko return karta hai.
 displayName function ko return karte waqt, yeh apne parent scope (yani makeFun function) ke variables ko “yaad” rakhta hai. Is process ko closure kehte hain.
 -Function Call:
 const myFun = makeFun(); line mein, makeFun function ko call kiya gaya aur displayName function ko myFun variable mein store kiya gaya.
@@ -1345,7 +1345,7 @@ Jab myFun() ko call kiya jata hai, yeh displayName function ko execute karta hai
 Simple Summary:
 Closure: displayName function apne parent function makeFun ke name variable ko access kar sakta hai, even after makeFun function execute ho chuka hai. Yeh closure ka power hai.
 
---**Simple Summary **
+- **Simple Summary **
 	**Lexical Scope:** Function apne outer scope ke variables ko access kar sakta hai.
 	**Closure:** Function apne parent scope ke variables ko access kar sakta hai, even after parent function execute ho chuka ho.
 
