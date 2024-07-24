@@ -1293,8 +1293,8 @@ Yeh bilkul waise hi hai jaise hum ek complex cheez ko simplify karne ke liye usk
 - **Closure Reference:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 - **Lexical Scope:**  Lexical scope ka matlab hai ki ek function ke andar jo variables aur functions hote hain, unka scope (yaani ki woh kin   	variables aur functions ko access kar sakte hain) us jagah se decide hota hai jahan woh source code mein likhe gaye hain. Matlab, ek 	function apne   outer scope ke variables ko access kar sakta hai.
 	example -
-	```javascript 
-	function outerFunction() {
+```javascript
+function outerFunction() {
     let outerVariable = 'I am outside!';
 
     function innerFunction() {
@@ -1304,9 +1304,9 @@ Yeh bilkul waise hi hai jaise hum ek complex cheez ko simplify karne ke liye usk
     innerFunction();
 }
 outerFunction(); // Output: I am outside!
- ```
-- innerFunction outerVariable ko access kar sakta hai kyunki lexical scoping ke wajah se
+```
 
+- innerFunction outerVariable ko access kar sakta hai kyunki lexical scoping ke wajah se
 - Closure gives you access to an outer function's scope from an inner function.
 - If the outer function has inner function then at this time memory is shared.
 - The variable declared in outer function has access in both outer and inner function.
