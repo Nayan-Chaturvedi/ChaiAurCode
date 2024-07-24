@@ -1339,7 +1339,7 @@ displayName function ko return karte waqt, yeh apne parent scope (yani makeFun f
 - Function Call:
 const myFun = makeFun(); line mein, makeFun function ko call kiya gaya aur displayName function ko myFun variable mein store kiya gaya.
 Jab myFun() ko call kiya jata hai, yeh displayName function ko execute karta hai jo name variable ko console mein print karta hai.
-Simple Summary:
+- Simple Summary:
 Closure: displayName function apne parent function makeFun ke name variable ko access kar sakta hai, even after makeFun function execute ho chuka hai. Yeh closure ka power hai.
 
 - **Simple Summary**
