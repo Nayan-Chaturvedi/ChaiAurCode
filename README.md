@@ -287,12 +287,11 @@
     console.log(name("String"));
 	```
 **Explanation**
-	- split(‘’): str.split('') splits the string str into an array of individual characters.
+- split(‘’): str.split('') splits the string str into an array of individual characters.
 	For example, 'string'.split('') results in ['s', 't', 'r', 'i', 'n', 'g'].
-	- reverse(): The reverse() method reverses the order of elements in the array.
+- reverse(): The reverse() method reverses the order of elements in the array.
 	For example, ['s', 't', 'r', 'i', 'n', 'g'].reverse() results in ['g', 'n', 'i', 'r', 't', 's'].
-	- join(‘’):
-	The join('') method joins all elements of the array into a single string.
+- join(‘’): The join('') method joins all elements of the array into a single string.
 	For example, ['g', 'n', 'i', 'r', 't', 's'].join('') results in 'gnirts'.
 
 **Custom reverse() function**
