@@ -236,6 +236,15 @@
 - We denote string single or double quote '' / ""
 - In modern days, we need to use backticks `` for string manipulation called string interpolation.
 - All methods are available in **__proto__** for string, example toUpperCase() etc
+- **Explanation :**
+	- JavaScript mein, har object ke paas ek hidden property hoti hai jise __proto__ kehte hain. Yeh property us object ke prototype ko refer 	karti hai. Prototype mein wo saare methods aur properties hoti hain jo us object ke type ke liye defined hote hain.
+	
+	**Example**
+	```javascript
+	let str = "hello";
+	```
+
+	- Toh str object ke paas __proto__ property hoti hai jo String.prototype ko refer karti hai. String.prototype mein saare string methods available hote hain, jaise toUpperCase(), toLowerCase(), charAt(), etc.
 - If we use methods related to **__proto__** then original value is not changed.
 - we can check what character available we use charAt(index)
 - **indexOf('character') :** we can get the index of the character
