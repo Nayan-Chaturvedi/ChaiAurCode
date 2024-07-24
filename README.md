@@ -1522,9 +1522,10 @@ undefined
 ```javascript
  var age = prompt("How old are you?");
  console.log(age); // Prints the value inserted by the user
-```javascript
+```
 
 **null**
+
 - Purpose: Jab aapko intentionally batana ho ki yeh variable ya object abhi koi value hold nahi karta.
 - Type: Primitive value hai.
 - Purpose: Jab variable declare kiya gaya ho lekin usme koi value assign na hui ho.
