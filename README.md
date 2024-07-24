@@ -365,12 +365,34 @@ Output: [ "apples", "bananas", "cranberries" ]
 - If we write const score=400, then Javscript will recognise it as number, but we can explicitly define numbers as new Number(400)
 - we can convert number into string using toString() method, it will help me to use string methods
 - **toFixed() :**  to give the precision value till few decimal values, like toFixed(2) ➜ it will give .00 like that
-- **toPrecision(3):**  it will focus on only 3 digit value only
-- **toLocaleString('en-IN') :** this method will be helpful in giving the output in redable format of number, like 1000000 ➜ 1,000,00
+	**Example**
+	```javascrpt
+		let num = 5.56789;
+
+		console.log(num.toFixed());    // Output: "6"
+		console.log(num.toFixed(2));   // Output: "5.57"
+		console.log(num.toFixed(4));   // Output: "5.5679"
+		console.log(num.toFixed(10));  // Output: "5.5678900000"
+	```
+
+- **toPrecision(3):**  it will focus on only 3 digit value only. 
+	**Example**
+	```javascript
+		let num = 5.123456;
+
+		console.log(num.toPrecision());    // Output: "5.123456"
+		console.log(num.toPrecision(5));   // Output: "5.1235"
+		console.log(num.toPrecision(2));   // Output: "5.1"
+		console.log(num.toPrecision(1));   // Output: "5"
+		```
+**Uses :**
+ 	- Use .toFixed() when you need a specific number of decimal places, such as in financial calculations.
+	- Use .toPrecision() when you need a specific number of significant digits, often useful in scientific calculations1
+- **toLocaleString('en-IN') :** this method will be helpful in giving the output in readable format of number, like 1000000 ➜ 1,000,00
 - **Maths.abs():** it will convert -ve value into +ve value, +ve will remain +ve, it helps to convert -ive value into +ve value.
 - **Math.round():** To get the round value, example: Math.round(4.3) ➜ 4
 - **Math.ceil():** It will round the value to top. Example: Math.ceil(4.6) ➜ 5 or Math.ceil(4.2) ➜ 5
-- **Math.floor():** It will take bottom value, Example: Math.floor(4.2) -6-> 4.2 or Math.floor(4.6) ➜ 4, It will always takes the lowest value
+- **Math.floor():** It will take bottom value, Example: Math.floor(4.2) --> 4  or Math.floor(4.6) ➜ 4, It will always takes the lowest value
 - Mostly we will use round() method instead of ceil and floor
 - **Math.min():** we can findout the minimum value from the given numbers, example: Math.min(3,4,5,6,) ➜ 3
 - **Math.max():** we can findout the maximum value from the given numbers, example: Math.min(3,4,5,6,) ➜ 6
@@ -1464,4 +1486,18 @@ Closure: displayName function apne parent function makeFun ke name variable ko a
 
 ## Lecture 20: Javascript ends with story
 
-- When you do project ➜ you stuck ➜ you solve ➜ you only learn                
+- When you do project ➜ you stuck ➜ you solve ➜ you only learn 
+
+<hr />
+<br />
+
+## My Notes
+        
+**Program**
+```javascript
+console.log("Hello World")
+ Hello World
+undefined
+```
+
+- console.log() ka koi return type nahi hai ishliye undefined print hota hai       
