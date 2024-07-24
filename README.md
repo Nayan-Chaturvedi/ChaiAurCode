@@ -1535,18 +1535,19 @@ undefined
  null == undefined; // true
  null === undefined; // false
 ```
- CAREFUL: The typeof null is 'object'.
+- CAREFUL: The typeof null is 'object'.
 ```javascript
  typeof null; // 'object';
 ```
- To properly check if a value is null, compare it with the strict equality operator
+- To properly check if a value is null, compare it with the strict equality operator
 ```javascript
  var a = null;
  a === null; // true
 ```
 
 **NAN**
-- SNaN stands for "Not a Number." When a mathematical function or operation in JavaScript cannot return a specific
+
+- NaN stands for "Not a Number." When a mathematical function or operation in JavaScript cannot return a specific
  number, it returns the value NaN instead.
 
 ** undefined and null**
