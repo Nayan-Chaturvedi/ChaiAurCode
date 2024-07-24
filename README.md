@@ -776,9 +776,9 @@ console.log(Object.keys(obj));
 - console.log(document.baseURI)= ye hame web page ka base url provide karta hai.
 - console.log(document.links) = Hamari web page par sabhi links provide karta hai
 - console.log(document.links[1]) = hame 1 index ki link retun karega	
--  document.getElementById() = JavaScript ka ek method hai jo HTML document mein kisi specific ID wale element ko dhoondhne ke liye use                 hota hai.
--document.getElementById("siteSub").innerHTML="<h1>Nayan</h1>"=document.getElementById("siteSub"): Yeh line HTML document mein id “siteSub” wale        element ko dhoondti hai.
-.innerHTML="<h1>Nayan</h1>": Yeh line us element ke andar ka HTML content change karke <h1>Nayan</h1> set karti hai, jo ki “Nayan” ko heading 1 format mein display karega.
+-  document.getElementById() = JavaScript ka ek method hai jo HTML document mein kisi specific ID wale element ko dhoondhne ke liye use                   	hota hai.
+-document.getElementById("siteSub").innerHTML="<h1>Nayan</h1>" = document.getElementById("siteSub"): Yeh line HTML document mein id “siteSub” wale        	element ko dhoondti hai.
+-innerHTML = " <h1>Nayan</h1>" : Yeh line us element ke andar ka HTML content change karke <h1> Nayan </h1> set karti hai, jo ki ' Nayan '  ko 	heading 1 format mein display karega.
 
 
 ![DOM](/src/images/DOM.png)
@@ -873,12 +873,15 @@ example -
     const turnGreen = myUl.querySelector('li')
     turnGreen.style.backgroundColor = "green"
     turnGreen.style.padding = "10px";
+	// The padding property in CSS is used to create space around an element’s content, inside of any defined borders.
     turnGreen.innerText = "five"
   ```
 
   - Remember, querySelector will only gives 1 value
   - To select all list item, use querySelectorAll()
   - Nodelist are not pure array
+  - NodeList JavaScript mein ek collection hota hai nodes ka, jo aksar properties aur methods jaise Node.childNodes aur document.querySelectorAll() 	se return hota hai.
+  -Array-like: NodeList array ki tarah hota hai, jismein aap index (0 se shuru) ka use karke items ko access kar sakte hain aur isme length property 	hoti hai. Lekin yeh ek true array nahi hota aur isme array methods jaise push() ya pop() nahi hote.
   ```javascript
     const tempLiList = document.querySelectorAll('li');
     tempLiList[0].style.color = "green"
@@ -926,7 +929,7 @@ example -
 - To select 1 element in array: parent.children[0]
 - To access the inner value of it, we can use parent.children[0].innerHTML
 - We can create the new element using document.createElement('div'), so here div is created
-- The document will be visible when it is attached using appenChild method
+- The document will be visible when it is attached using appendChild method
 
 <hr/>
 <br/>
@@ -1288,11 +1291,62 @@ Yeh bilkul waise hi hai jaise hum ek complex cheez ko simplify karne ke liye usk
 ## Lecture 19: Lexical scope and closure
 
 - **Closure Reference:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+- **Lexical Scope:**  Lexical scope ka matlab hai ki ek function ke andar jo variables aur functions hote hain, unka scope (yaani ki woh kin   	variables aur functions ko access kar sakte hain) us jagah se decide hota hai jahan woh source code mein likhe gaye hain. Matlab, ek 	function apne   outer scope ke variables ko access kar sakta hai.
+	example -
+	```javascript 
+	function outerFunction() {
+    let outerVariable = 'I am outside!';
+
+    function innerFunction() {
+        console.log(outerVariable); // outerVariable ko access kar sakta hai
+    }
+
+    innerFunction();
+}
+
+
+outerFunction(); // Output: I am outside!
+ ```
+- innerFunction outerVariable ko access kar sakta hai kyunki lexical scoping ke wajah se
+
 - Closure gives you access to an outer function's scope from an inner function.
 - If the outer function has inner function then at this time memory is shared.
-- The variable decalred in outer function has access in both outer and inner function.
+- The variable declared in outer function has access in both outer and inner function.
 - It is not possible to access the variable declared inside function to outside of function.
 - While we return the function reference, we return the whole lexical scope, means it return the variable as well.
+- example
+```javascript 
+	function makeFun() {
+    const name = "Nayan";
+
+    function displayName() {
+        console.log(name);
+    }
+
+    return displayName;
+}
+
+const myFun = makeFun();
+myFun(); // Output: Nayan
+
+ ```
+- ** Explanation**
+	Explanation:
+Function Definition:
+makeFun function ke andar ek name variable define kiya gaya hai jiska value “Nayan” hai.
+makeFun ke andar ek aur function displayName define kiya gaya hai jo name variable ko console mein print karta hai.
+Closure Creation:
+Jab makeFun function ko call kiya jata hai, yeh displayName function ko return karta hai.
+displayName function ko return karte waqt, yeh apne parent scope (yani makeFun function) ke variables ko “yaad” rakhta hai. Is process ko closure kehte hain.
+Function Call:
+const myFun = makeFun(); line mein, makeFun function ko call kiya gaya aur displayName function ko myFun variable mein store kiya gaya.
+Jab myFun() ko call kiya jata hai, yeh displayName function ko execute karta hai jo name variable ko console mein print karta hai.
+Simple Summary:
+Closure: displayName function apne parent function makeFun ke name variable ko access kar sakta hai, even after makeFun function execute ho chuka hai. Yeh closure ka power hai.
+
+--**Simple Summary **
+	**Lexical Scope:** Function apne outer scope ke variables ko access kar sakta hai.
+	**Closure:** Function apne parent scope ke variables ko access kar sakta hai, even after parent function execute ho chuka ho.
 
 <hr />
 <br />
