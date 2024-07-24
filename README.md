@@ -1500,4 +1500,64 @@ console.log("Hello World")
 undefined
 ```
 
-- console.log() ka koi return type nahi hai ishliye undefined print hota hai       
+- console.log() ka koi return type nahi hai ishliye undefined print hota hai
+
+**Using window.alert()**
+ - The alert method displays a visual alert box on screen. The alert method parameter is displayed to the user in plain text:
+	```javascript
+ window.alert(message);
+	```
+ Because window is the global object, you can call also use the following shorthand:
+```javascript
+ alert(message)     
+```
+
+- Note : The alert method is technically a property of window object, but since all window properties areautomatically global variables, 
+	we can use alert as a global variable instead of a property of meaning you can directly use alert() instead of window. alert()  
+
+**Using window.prompt()**
+-  An easy way to get an input from a user is by using the .prompt() 
+
+**Examples**
+```javascript
+ var age = prompt("How old are you?");
+ console.log(age); // Prints the value inserted by the user
+```javascript
+
+**null**
+- Purpose: Jab aapko intentionally batana ho ki yeh variable ya object abhi koi value hold nahi karta.
+- Type: Primitive value hai.
+- Purpose: Jab variable declare kiya gaya ho lekin usme koi value assign na hui ho.
+- Type: Yeh bhi ek primitive value hai, lekin yeh global object ka property hai.
+- undefined : it is not a property of the global object
+
+```javascript
+ null == undefined; // true
+ null === undefined; // false
+```
+ CAREFUL: The typeof null is 'object'.
+```javascript
+ typeof null; // 'object';
+```
+ To properly check if a value is null, compare it with the strict equality operator
+```javascript
+ var a = null;
+ a === null; // true
+```
+
+**NAN**
+- SNaN stands for "Not a Number." When a mathematical function or operation in JavaScript cannot return a specific
+ number, it returns the value NaN instead.
+
+** undefined and null**
+
+- javaScript mein undefined ka matlab hota hai ki kisi variable ko declare toh kiya gaya hai, lekin usme koi value assign nahi hui hai. Yeh compiler ko batata hai ki yahan ek value expected thi, lekin abhi tak koi value assign nahi hui.
+
+ - undefined is a global value that represents the absence of an assigned value.
+```javascript
+ typeof undefined === 'undefined'
+```
+ - null is an object that indicates that a variable has been explicitly assigned "no value".
+```javascript
+ typeof null === 'object'
+```
