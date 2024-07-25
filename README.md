@@ -1070,11 +1070,11 @@ example -
 - We can create the new element using document.createElement('div'), so here div is created
 - The document will be visible when it is attached using appendChild method
 - **parent.childNodes**
-		- parent.childNodes ek JavaScript property hai jo ek collection (NodeList) laata hai.
-		- it's include
-			- text ( Whitespace  content ko represent karte hain)
-			- element
-			- comments
+- parent.childNodes ek JavaScript property hai jo ek collection (NodeList) laata hai.
+- it's include
+	- text ( Whitespace  content ko represent karte hain)
+	- element
+	- comments
 
 <hr/>
 <br/>
