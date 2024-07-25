@@ -1118,20 +1118,106 @@ example -
 
 - Whatever the event run in the javascript, it runs in sequentially
 - But in asynchronous programming, we deviate the sequence and come back, same like browser event, it activate in browser events.
+
+**Explain**
+	- Asynchronous programming ek aisa tareeka hai jahan par tasks ko mukhya program flow se alag taur par execute kiya jaata hai. Ismein har task ko pura hone ka intezaar nahi kiya 	jaata, balki dusre tasks ko bhi concurrently chalne diya jaata hai.
+	- Asynchronous programming aur JavaScript events isliye related hain kyunki JavaScript mein event handling aksar asynchronous behavior ke saath hota hai.
+	- Jab aap kisi element (jaise ki button) par ek event listener attach karte hain, toh wo associated event (jaise ki click) ka wait karta hai. Is beech mein mukhya program flow 	dusre tasks ko execute karta rahta hai.
 - Write a logic that is scalable in javascript, so better avoid writing onclick on button in js.
-- Dont write simply onclick event but use addEventListener, as it will give much detail like propogation, or gives less features if use onclick.
-- Add the event listener in string.
-  - We should learn about type, timestamp(how to change the date), preventDefault(to overrid the default value of any tag), target, toElement, srcElement, currentTarget. - Need to know clientX, clientY, screenX, screenY related to positions.
+```javascript
+<li><img src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop" id="owl" onclick="alert('owlClick')"   width="200px"></li>
+```
+- Don't write simply onclick event but use addEventListener, as it will give much detail like propagation.
+```javascript
+ document.getElementById('images').addEventListener('click', function(){
+       console.log('inside ul')
+     }, false)
+```
+
+**Event Propogation**
+- Imagine kijiye aap ek party mein hain aur aapne ek cool dance move seekha hai. Event propagation thoda usi tarah ka hai.
+- Aap apne doston ko apne dance move dikhate hain (inner circle). Fir unka dost bhi apne dost ko batate hain (outer circle), aur aise hi chalta rahta hai.
+- Waise hi, jab koi event (jaise ki button click) web page mein hota hai, toh wo specific element se shuru hota hai (inner circle) aur uske parent elements tak jaata hai (outer circles), jab tak wo top tak pahunch jaata hai (root element).
+Ismein do tareeke hote hain: Event bubbling aur Event capturing.
+
+**Event Bubbling**
+Event bubbling mein, jab ek event kisi specific element pe trigger hota hai, toh wo event sabse pehle us element pe handle hota hai, phir uske parent element pe, aur aise hi root element tak bubble karta hai.
+```javascript
+document.getElementById('images').addEventListener('click', function(e){
+    console.log("clicked inside the ul");
+}, false);
+
+document.getElementById('owl').addEventListener('click', function(e){
+    console.log("owl clicked");
+}, false);
+```
+- Is example mein, agar aap #owl image pe click karte ho, toh pehle #owl ka event handler trigger hoga aur console mein “owl clicked” print hoga. Uske baad, ye event bubble karke #images element tak pahunchta hai aur “clicked inside the ul” print hota hai.
+
+
+
+
+**Event Capturing**
+- Event capturing (ya phir trickling) mein, event sabse pehle root element se start hota hai aur specific target element tak pahunchta hai.
+```javascript
+document.getElementById('images').addEventListener('click', function(e){
+    console.log("clicked inside the ul");
+}, true);
+
+document.getElementById('owl').addEventListener('click', function(e){
+    console.log("owl clicked");
+}, true);
+```
+- Is example mein, agar aap #owl image pe click karte ho, toh pehle #images ka event handler trigger hoga aur “clicked inside the ul” print hoga. Uske baad, ye event capture hote hue #owl element tak pahunchta hai aur “owl clicked” print hota hai.
+
+- Summary 
+	- Event Bubbling: Event specific element se start hota hai aur root element tak bubble karta hai.
+	- Event Capturing: Event root element se start hota hai aur specific element tak capture hota hai.
+
+- Add the event listener name in string.	
+**Example**
+	-addEventListener('click', function(){}, false) , Here 'click' is String
+	
+- use of 3rd parameter in addEventListener(false)
+	- Teesra parameter false ka use event bubbling aur event capturing ko control karne ke liye hota hai.
+
+	- Explanation:
+		- False: Agar aap false set karte ho, toh event bubbling mode mein hoga. Matlab, event specific element se start hoke root element tak bubble karega.
+		- False: Event bubbling mode.
+		- by default (agar hum 3rd parameter na de) tab bhi false hota hai.
+		- True: Agar aap true set karte ho, toh event capturing mode mein hoga. Matlab, event root element se start hoke specific element tak capture hote hue aayega.
+		- True: Event capturing mode.
+		
+
+  - We should learn about type, timestamp(how to change the date), preventDefault(to override the default value of any tag), target, toElement, srcElement, currentTarget. - Need to know clientX, clientY, screenX, screenY related to positions.
 - altKey, ctrlKey, shiftKey, keyCode(what is the key code of any character, or to check keyboard speed).
  - Event Propogation is of 2 types, Event bubbling(default), Event capturing.
 - If we add the addEventlistener on parent and child, we should think, which will be clicked first?.
-- The answer is Event bubbling, means the event propogates from low to high. Here 1st from li then ul.
-- If we apply e.stopPropogation, then event will not propogate to the parent.
+- The answer is Event bubbling, means the event propagates from low to high. Here 1st from li then ul.
+- Sometime we provide e in function
+```javascript
+	document.getElementById('owl').addEventListner('click', function(e){}, false)
+```
+	- e ya event object: Event ke baare mein saari information contain karta hai.
+	- Usage: Event ke details access karne aur actions perform karne ke liye use hota hai.
+- If we apply e.stopPropogation, then event will not propagate to the parent.
+	**Explanation**
+		- Jab aap e.stopPropagation() method ko call karte ho, toh wo event ko uske parent elements tak propagate hone se rok deta hai. Matlab, event jo bhi current element pe 		trigger hua hai, wo wahi pe ruk jayega aur aage bubble ya capture nahi hoga.
+		```javascript
+			document.getElementById('images').addEventListener('click', function(e){
+   			 console.log("clicked inside the ul");
+			}, false);
+
+			document.getElementById('owl').addEventListener('click', function(e){
+   			 e.stopPropagation(); // Event propagation ko yahin rok deta hai
+   			 console.log("owl clicked");
+			}, false);
+
+		```
 - **e.target:** it will give the targeted element
 - **e.target.parentNode:** Here, we can select the parent element.
 - **remove():** It will remove the element from nodeList.
 - **removeChild():** It will remove the child element from parent Node.
-- Read more about event, that help in understanding the events
 
 <hr />
 <br />

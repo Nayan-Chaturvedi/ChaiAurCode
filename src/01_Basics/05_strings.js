@@ -27,7 +27,7 @@ console.log(newStringOne.trim());
 const url = "https://hitesh.com/hitesh%20chodhary";
 console.log(url.replace("%20", "-"));
 
-console.log(url.includes("hitesh"));
+console.log(url.includes("hitesh")); // its check "hitesh" is inckude or not
 
 const newStringTwo = "sarfaraz-hussain-chaudhary";
 console.log(newStringTwo.split("-"));
