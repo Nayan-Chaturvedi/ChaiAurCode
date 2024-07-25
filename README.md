@@ -1119,10 +1119,10 @@ example -
 - Whatever the event run in the javascript, it runs in sequentially
 - But in asynchronous programming, we deviate the sequence and come back, same like browser event, it activate in browser events.
 
-**Explain**
-	- Asynchronous programming ek aisa tareeka hai jahan par tasks ko mukhya program flow se alag taur par execute kiya jaata hai. Ismein har task ko pura hone ka intezaar nahi kiya 	jaata, balki dusre tasks ko bhi concurrently chalne diya jaata hai.
+- **Explain**
+	- Asynchronous programming ek aisa tareeka hai jahan par tasks ko mukhya program flow se alag taur par execute kiya jaata hai. Ismein har task ko pura hone ka intezaar nahi kiya 		jaata, balki dusre tasks ko bhi concurrently chalne diya jaata hai.
 	- Asynchronous programming aur JavaScript events isliye related hain kyunki JavaScript mein event handling aksar asynchronous behavior ke saath hota hai.
-	- Jab aap kisi element (jaise ki button) par ek event listener attach karte hain, toh wo associated event (jaise ki click) ka wait karta hai. Is beech mein mukhya program flow 	dusre tasks ko execute karta rahta hai.
+	- Jab aap kisi element (jaise ki button) par ek event listener attach karte hain, toh wo associated event (jaise ki click) ka wait karta hai. Is beech mein mukhya program flow 		dusre tasks ko execute karta rahta hai.
 - Write a logic that is scalable in javascript, so better avoid writing onclick on button in js.
 ```javascript
 <li><img src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
