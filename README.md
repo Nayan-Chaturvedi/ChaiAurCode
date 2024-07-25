@@ -1189,7 +1189,7 @@ document.getElementById('owl').addEventListener('click', function(e){
 		- True: Event capturing mode.
 		
 
-  - We should learn about type, timestamp(how to change the date), preventDefault(to override the default value of any tag), target, toElement, srcElement, currentTarget. - Need to know clientX, clientY, screenX, screenY related to positions.
+- We should learn about type, timestamp(how to change the date), preventDefault(to override the default value of any tag), target, toElement, srcElement, currentTarget. - Need to know clientX, clientY, screenX, screenY related to positions.
 - altKey, ctrlKey, shiftKey, keyCode(what is the key code of any character, or to check keyboard speed).
  - Event Propogation is of 2 types, Event bubbling(default), Event capturing.
 - If we add the addEventlistener on parent and child, we should think, which will be clicked first?.
