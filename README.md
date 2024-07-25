@@ -913,7 +913,7 @@ console.log(Object.keys(obj));
 - console.log(document.links[1]) = hame 1 index ki link retun karega	
 -  document.getElementById() = JavaScript ka ek method hai jo HTML document mein kisi specific ID wale element ko dhoondhne ke liye use   hota hai.
 - document.getElementById("siteSub").innerHTML="<h1>Nayan</h1>" = document.getElementById("siteSub"): Yeh line HTML document mein id “siteSub” wale       element ko dhoondti hai.
-- innerHTML="<h1>Nayan</h1>" : Yeh line us element ke andar ka HTML content change karke <h1>Nayan</h1> set karti hai, jo ki 'Nayan'  ko heading 1 format mein display karega.
+- innerHTML="h1>Nayan</h1" : Yeh line us element ke andar ka HTML content change karke h1>Nayan</h1 set karti hai, jo ki Nayan  ko heading 1 format mein display karega.
 
 
 ![DOM](/src/images/DOM.png)
