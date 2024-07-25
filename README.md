@@ -339,8 +339,7 @@
  var arr = ["bananas", "cranberries", "apples"];
  arr.sort(function(a, b) {
     return a.localeCompare(b);
- LearnLoner.com
-});
+ });
  console.log(arr); // [ "apples", "bananas", "cranberries" ]
 ```
 
@@ -947,7 +946,6 @@ document.getElementById('firstHeading').innerHTML = "<h1>Chai aur code<h1/>"
 
 - Open wiki page of a JavaScript, as the wiki page is created so cleanly
 - We will see here, what element we can catch, and what the things we can do manipulate it.
-- Focus on Javascript rather than react, angular, servlet, who knows future
 - Focus on selecting element then apply methods to manipulate it.
 - Behind the scene, document understand it as className not class
   
@@ -1061,9 +1059,8 @@ example -
 
 ## Lecture 3: How to create a new element
 
-- Knowledge on DOM will help to crack the interview, so dont take it lightly before starting react
 - We will focus here on relations, like parent-child relation, parent-parent relations etc
-- Scenario: we need to create the element ➜ create the query from DB ➜ Set into array ➜ display in UI
+- Scenario: we need to create the element like arr ➜ create the query from DB ➜ Set into array in javascript ➜ display in WebPage/User Inteface
 - Play with DOM to add or remove an element
 - to create div with4 elements use shortcut: div.day*4
 - Lets check the value in the parent
@@ -1072,6 +1069,12 @@ example -
 - To access the inner value of it, we can use parent.children[0].innerHTML
 - We can create the new element using document.createElement('div'), so here div is created
 - The document will be visible when it is attached using appendChild method
+- **parent.childNodes**
+		- parent.childNodes ek JavaScript property hai jo ek collection (NodeList) laata hai.
+		- it's include
+			- text ( Whitespace  content ko represent karte hain)
+			- element
+			- comments
 
 <hr/>
 <br/>
