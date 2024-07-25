@@ -426,8 +426,15 @@ Output: [ "apples", "bananas", "cranberries" ]
 - We can customise the date format, 
 
   **Example:**
-  ```javascript
-  newDate.toLocaleString('default',{ weekday: "short"}) ➜ Wed, as today is Wednesday
+ - .toLocaleString(): Yeh method Date object par call hota hai aur ismein do arguments hote hain:
+	- Pehla argument date ko format karne ke liye locale (bhasha aur kshetra) ko specify karta hai. For example, "en-US" English (United States) ko represent karta hai.
+	- Dusra argument ek optional options object hota hai, jismein aap formatting customize kar sakte hain. Aapne { weekday: "short" } use kiya hai, jisse aapko abbreviated weekday name 		(jaise “Wed” Wednesday ke liye) dikhana hai.
+
+```javascript
+const today = new Date();
+const formattedDate = today.toLocaleString('default', { weekday: 'short' });
+console.log(formattedDate); // Outputs "Wed" (Wednesday ke liye)
+```
 
 
 <hr/>
