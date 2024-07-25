@@ -1175,10 +1175,10 @@ document.getElementById('owl').addEventListener('click', function(e){
 	- Event Capturing: Event root element se start hota hai aur specific element tak capture hota hai.
 
 - Add the event listener name in string.	
-**Example**
-	-addEventListener('click', function(){}, false) , Here 'click' is String
+- **Example**
+	- addEventListener('click', function(){}, false) , Here 'click' is String
 	
-- use of 3rd parameter in addEventListener(false)
+- Why we use of 3rd parameter in addEventListener(false)
 	- Teesra parameter false ka use event bubbling aur event capturing ko control karne ke liye hota hai.
 
 	- Explanation:
@@ -1198,10 +1198,11 @@ document.getElementById('owl').addEventListener('click', function(e){
 ```javascript
 	document.getElementById('owl').addEventListner('click', function(e){}, false)
 ```
-	- e ya event object: Event ke baare mein saari information contain karta hai.
-	- Usage: Event ke details access karne aur actions perform karne ke liye use hota hai.
+- e ya event object: Event ke baare mein saari information contain karta hai.
+- Usage: Event ke details access karne aur actions perform karne ke liye use hota hai.
+
 - If we apply e.stopPropogation, then event will not propagate to the parent.
-	**Explanation**
+	- **Explanation**
 		- Jab aap e.stopPropagation() method ko call karte ho, toh wo event ko uske parent elements tak propagate hone se rok deta hai. Matlab, event jo bhi current element pe 		trigger hua hai, wo wahi pe ruk jayega aur aage bubble ya capture nahi hoga.
 		```javascript
 			document.getElementById('images').addEventListener('click', function(e){
